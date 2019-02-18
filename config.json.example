@@ -1,0 +1,34 @@
+{
+  "DEV": {
+    "app_url" : "https://dev.my_app.com",
+    "app_user": "ADD_YOUR_LOGIN",
+    "app_pwd" : "ADD_YOU_PASSWORD",
+    "db_host" : "dev.db-host-name",
+    "db_port" : "5432",
+    "db_name" : "db-name",
+    "db_user" : "ADD_YOUR_LOGIN",
+    "db_pswd" : "ADD_YOU_PASSWORD"
+  },
+
+  "UAT": {
+    "app_url" : "https://uat.my_app.com",
+    "app_user": "ADD_YOUR_LOGIN",
+    "app_pwd" : "ADD_YOUR_PASSWORD",
+    "db_host" : "uat.db-host-name",
+    "db_port" : "5432",
+    "db_name" : "db-name",
+    "db_user" : "ADD_YOUR_LOGIN",
+    "db_pswd" : "ADD_YOU_PASSWORD"
+  },
+
+  "LOCALHOST" : {
+    "app_url" : "http://localhost:3000",
+    "app_user": "ADD_YOUR_LOGIN",
+    "app_pwd" : "ADD_YOU_PASSWORD",
+    "db_host" : "localhost.db-host-name",
+    "db_port" : "5432",
+    "db_name" : "db-name",
+    "db_user" : "ADD_YOUR_LOGIN",
+    "db_pswd" : "ADD_YOU_PASSWORD"
+  }
+}

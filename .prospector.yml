@@ -1,0 +1,20 @@
+output-format: grouped
+strictness: veryhigh
+test-warnings: true
+max-line-length: 120
+pep8:
+    disable:
+        - W605
+        - W291
+pyflakes:
+    disable:
+        - F811
+pylint:
+    disable:
+        - anomalous-backslash-in-string
+        - too-many-public-methods
+        - too-many-arguments
+        - function-redefined
+        - logging-not-lazy
+        - unused-argument
+        - no-else-return

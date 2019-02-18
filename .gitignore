@@ -1,0 +1,29 @@
+# IDE #
+.idea/*
+__pycache__/
+
+
+# Compiled source #
+__init__.py
+*.pyc
+
+
+# Reporting and logs #
+rerun_failing.features
+allure-report/*
+artifacts/*
+*.json
+*.png
+*.log
+
+
+# Debug tools
+/tests/steps/utils_steps.py
+
+
+# Configuration files
+config.json
+
+
+# OS generated files #
+.DS_Store
