@@ -45,14 +45,16 @@ class MainMenuPage(BasePage):
 
     def assert_that_csv_file_was_downloaded_successfully(self, expected_file_name):
         file_manager_util.download_wait(self._PATH_TO_DOWNLOADS_FOLDER, ".csv")
-        downloaded_files = file_manager_util.get_files_from_directory(self._PATH_TO_DOWNLOADS_FOLDER, ".csv")
+        downloaded_files = file_manager_util.get_files_with_extension_from_directory(self._PATH_TO_DOWNLOADS_FOLDER,
+                                                                                     ".csv")
         downloaded_files = [re.sub('[-].*', '', x) for x in downloaded_files]
 
         assert_that(downloaded_files, has_item(expected_file_name))
 
     def assert_that_csv_file_contains_row_num(self, expected_file_name, expected_row_num):
         actual_file_name = ""
-        downloaded_files = file_manager_util.get_files_from_directory(self._PATH_TO_DOWNLOADS_FOLDER, ".csv")
+        downloaded_files = file_manager_util.get_files_with_extension_from_directory(self._PATH_TO_DOWNLOADS_FOLDER,
+                                                                                     ".csv")
         for file_name in downloaded_files:
             if expected_file_name in file_name:
                 actual_file_name = file_name

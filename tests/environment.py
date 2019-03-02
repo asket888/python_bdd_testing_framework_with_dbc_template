@@ -1,7 +1,8 @@
 import allure
 
-from db.db_connection import DbConnection
 from pages.login_page import LoginPage
+from db.db_connection import DbConnection
+from files.file_manager import FileManager
 from pages.main_menu_page import MainMenuPage
 from pages.flight_page import FlightCreatePage
 from pages.account_page import AccountCreatePage
@@ -15,9 +16,10 @@ def before_all(context):
     context.env = get_env(context.config.userdata['env'])
     context.browser = get_browser(context.config.userdata['browser'])
     # setup page_objects
+    context.login_page = LoginPage(context)
+    context.file_manager = FileManager(context)
     context.db_connection = DbConnection(context)
     context.main_menu_page = MainMenuPage(context)
-    context.login_page = LoginPage(context)
     context.flight_page = FlightCreatePage(context)
     context.account_page = AccountCreatePage(context)
     context.project_page = ProjectCreatePage(context)
